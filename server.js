@@ -33,7 +33,7 @@ const scrapeCl = (url, callback) => {
 
         let images = imageData.map(function(id) {
           return(
-            `https://images.craigslist.org/${id}_300x300.jpg`
+            `https://images.craigslist.org/${id}_600x450.jpg`
           )
         })
 
