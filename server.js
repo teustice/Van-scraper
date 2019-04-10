@@ -36,6 +36,7 @@ app.get('/hiace', function(req, res){
             $('.result-row').each(function(index, van){
                 let vanData = {
                   title: $(van).find('.result-title').text(),
+                  price: $(van).find('.result-meta .result-price').text(),
                   date: $(van).find('.result-date').attr('datetime'),
                   link: $(van).find('.result-title').attr('href')
                 }
@@ -71,6 +72,7 @@ app.get('/townace', function(req, res){
 
                 let vanData = {
                   title: $(van).find('.result-title').text(),
+                  price: $(van).find('.result-meta .result-price').text(),
                   date: $(van).find('.result-date').attr('datetime'),
                   link: $(van).find('.result-title').attr('href')
                 }
@@ -106,6 +108,7 @@ app.get('/liteace', function(req, res){
 
                 let vanData = {
                   title: $(van).find('.result-title').text(),
+                  price: $(van).find('.result-meta .result-price').text(),
                   date: $(van).find('.result-date').attr('datetime'),
                   link: $(van).find('.result-title').attr('href')
                 }
