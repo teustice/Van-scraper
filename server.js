@@ -92,6 +92,13 @@ app.get('/liteace', function(req, res) {
   })
 })
 
+app.get('/delica', function(req, res) {
+  url = 'https://portland.craigslist.org/search/cta?query=mitsubishi+delica&sort=rel';
+  scrapeCl(url, function(json) {
+    res.json(json)
+  })
+})
+
 app.listen('8081')
 console.log('Ready to rumble on port 8081');
 exports = module.exports = app;
