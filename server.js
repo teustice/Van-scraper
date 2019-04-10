@@ -16,8 +16,7 @@ const scrapeCl = (url, callback) => {
 
       $('.result-row').each(function(index, van) {
 
-        let imageData = $(van).find('.result-image').attr('data-ids')
-        imageData = imageData.split(':')
+        let imageData = $(van).find('.result-image').attr('data-ids').split(':')
         totalImageCount = imageData.unshift();
 
         //Parse the image id's from the CL gallery
@@ -29,10 +28,10 @@ const scrapeCl = (url, callback) => {
 
         imageData = imageData.slice(1, imageData.length) //remove leading 1
 
+        //Known supported resolutions are:
+        //300x300
+        //600x450
         let images = imageData.map(function(id) {
-          //Known supported resolutions are:
-          //300x300
-          //600x450
           return (
             `https://images.craigslist.org/${id}_600x450.jpg`
           )
