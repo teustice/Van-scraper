@@ -1,0 +1,15 @@
+{
+  "name": "van-scraper",
+  "version": "0.0.1",
+  "description": "Keep up to date with all your van needs",
+  "main": "server.js",
+  "author": "Tanner Eustice",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "latest",
+    "request": "latest",
+    "cheerio": "latest"
+  }
+}
